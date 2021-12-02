@@ -114,8 +114,7 @@ secondary menu
   transform: translateX(0%);
   transition: all var(--speed);
 }
-.menu-secondary-exit {
-}
+
 .menu-secondary-exit-active {
   transform: translateX(110%);
   transition: all var(--speed);
