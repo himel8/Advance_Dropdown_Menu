@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Pages/Shared/Navbar/Navbar";
+import NavItem from "./Pages/Shared/Navbar/NavItem";
+import HomeIcon from "@mui/icons-material/Home";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import SettingsIcon from "@mui/icons-material/Settings";
+import DropdownMenu from "./Pages/Shared/Navbar/DropdownMenu";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Navbar>
+      <NavItem icon={<HomeIcon />} />
+      <NavItem icon={<MailOutlineIcon />} />
+      <NavItem icon={<SettingsIcon />}>
+        <DropdownMenu />
+      </NavItem>
+    </Navbar>
   );
 }
 
